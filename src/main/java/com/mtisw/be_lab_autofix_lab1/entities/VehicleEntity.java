@@ -1,5 +1,7 @@
 package com.mtisw.be_lab_autofix_lab1.entities;
 
+import com.mtisw.be_lab_autofix_lab1.enums.EngineType;
+import com.mtisw.be_lab_autofix_lab1.enums.VehicleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,11 +27,13 @@ public class VehicleEntity {
 
     private String model;
 
-    private String vehicleType;
+    @Enumerated(EnumType.STRING)
+    private VehicleType vehicleType;
 
     private Integer manufacturingYear;
 
-    private String engineType;
+    @Enumerated(EnumType.STRING)
+    private EngineType engineType;
 
     private Integer numberOfSeats;
 

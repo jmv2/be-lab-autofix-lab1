@@ -34,9 +34,16 @@ public class VehicleController {
         return ResponseEntity.ok(vehicle);
     }
 
+    @GetMapping(params = "plateNumber")
+    public ResponseEntity<VehicleEntity> getVehicleByPlateNumber(@RequestParam String plateNumber) {
+        VehicleEntity vehicle = vehicleService.findByPlateNumber(plateNumber);
+        return ResponseEntity.ok(vehicle);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Boolean> deleteVehicleById(@PathVariable Long id) throws Exception {
         var isDeleted = vehicleService.deleteVehicle(id);
         return ResponseEntity.noContent().build();
     }
+
 }

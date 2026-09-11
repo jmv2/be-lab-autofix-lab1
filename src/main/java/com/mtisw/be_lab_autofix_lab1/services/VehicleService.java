@@ -1,7 +1,6 @@
 package com.mtisw.be_lab_autofix_lab1.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,7 @@ public class VehicleService {
     @Autowired
     VehicleRepository vehicleRepository;
 
-    public List<VehicleEntity>  listAllVehicles(){
+    public List<VehicleEntity> listAllVehicles(){
         return vehicleRepository.findAll();
     }
 
@@ -34,7 +33,10 @@ public class VehicleService {
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
+    }
 
+    public VehicleEntity findByPlateNumber(String plateNumber){
+        return vehicleRepository.findByPlateNumber(plateNumber);
     }
 
 }

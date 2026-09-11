@@ -5,7 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.mtisw.be_lab_autofix_lab1.entities.VehicleEntity;
 
+
 @Repository 
 public interface VehicleRepository extends JpaRepository<VehicleEntity, Long>{
-    
+    public VehicleEntity findByPlateNumber(String plateNumber);
 }
