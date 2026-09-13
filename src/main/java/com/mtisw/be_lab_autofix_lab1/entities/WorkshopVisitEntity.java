@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -15,16 +14,16 @@ import java.time.LocalTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RepairEntity {
+public class WorkshopVisitEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
 
+    private String plateNumber;
+
     private LocalDate workshopEntryDate;
     private LocalTime workshopEntryTime;
-
-    private BigDecimal totalRepairCost;
 
     private LocalDate repairCompletionDate;
     private LocalTime repairCompletionTime;
@@ -34,5 +33,4 @@ public class RepairEntity {
 
     private Integer mileage;
 
-    private String plateNumber;
 }

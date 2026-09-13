@@ -1,0 +1,15 @@
+package com.mtisw.be_lab_autofix_lab1.enums;
+
+public enum RepairType {
+    BRAKE_SYSTEM,
+    COOLING_SYSTEM,
+    ENGINE,
+    TRANSMISSION,
+    ELECTRICAL_SYSTEM,
+    EXHAUST_SYSTEM,
+    TIRES_AND_WHEELS,
+    SUSPENSION_AND_STEERING,
+    AIR_CONDITIONING_AND_HEATING,
+    FUEL_SYSTEM,
+    WINDSHIELD_AND_GLASS
+}
