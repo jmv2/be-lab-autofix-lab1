@@ -26,6 +26,4 @@ public class WorkshopVisitController {
         WorkshopVisitEntity newRepair = workshopVisitService.saveRepair(repair);
         return ResponseEntity.ok(newRepair);
     }
-
-
 }
