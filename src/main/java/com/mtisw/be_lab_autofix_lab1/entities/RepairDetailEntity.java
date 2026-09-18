@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "repairs_details")
@@ -23,6 +22,6 @@ public class RepairDetailEntity {
     @Enumerated(EnumType.STRING)
     private RepairType repairType;
 
-    private BigDecimal repairCost;
+    private Integer repairCost;
 
 }
